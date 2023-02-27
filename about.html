@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About hyd-metro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <style>
+        #ham-mark{
+    color: white;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: 90px;
+    left: 5px;
+    background-color: #333;
+    border-radius: 50%;
+    text-align: center;
+}
+.hamtab{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    margin-top: 45px;
+    list-style: none;
+   
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="navtab">
+            <li><a href=""><img src="./images/logo2.jpg" alt="" id="img"></a></li>
+            <li><a href="./booking.html">home</a></li>
+            <li><a href="./about.html">about</a></li>
+            <li><a href="#">your bookings</a></li>
+        </ul>
+        <span class="fas fa-bars "id="ham" ></span>
+       </nav>
+
+        <div id="ham-container">
+        <div>
+            <ul class="hamtab">
+                <li><a href="./booking.html">home</a></li>
+                <li><a href="./about.html">about</a></li>
+                <li><a href="#">your bookings</a></li>
+            </ul>
+        </div> 
+           <span class="fas fa-xmark" id="ham-mark"></span>
+           </div>
+      <center>
+        <p id="top"></p>
+        <div class="info">
+            <p>Hyderabad Metro services were launched in November of 2017 with the vision of creating efficient, safe, reliable and affordable public transportation system to transform how people move in the city. With an increasing ridership, the metro already looks promising as a serious mode of transport for Hyderabad. As the network of services grows, the metro is poised to witness a huge surge in ridership and demand.</p>
+          
+        </div>
+        <p id="display"></p> 
+           <button class="btn" onclick="dataLoad()">view_More</button>
+           
+      </center>
+      <div class="img-container">
+        <img src="./images/map.png" alt="">
+      </div>
+      <a href="#top" id="up" class="fa-solid fa-arrow-up"></a>
+      <script src="./about.js"></script>
+</body>
+</html>

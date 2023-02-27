@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Section</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+</head>
+<body>
+    <nav>
+        <ul class="navtab">
+            <li><img src="./images/log.webp" alt="" id="img"></li>
+            <li><a href="">home</a></li>
+            <li><a href="./about.html">about</a></li>
+            <li><a href="#">your bookings</a></li>
+        </ul>
+        <span class="fas fa-bars "id="ham" ></span>
+       </nav>
+
+       <div id="ham-container">
+        <div>
+            <span class="fas fa-xmark" id="ham-mark"></span>
+            <ul class="hamtab">
+                <li><a href="">home</a></li>
+                <li><a href="./about.html">about</a></li>
+                <li><a href="#book" id="book">your bookings</a></li>
+            </ul>
+            
+           </div>
+    </div>
+    <h1 id="h1">welcome to booking section</h1>
+    <div class="timebox">
+        <span id="hrs">00</span>
+        <span>:</span>
+        <span id="min">00</span>
+        <span>:</span>
+        <span id="sec">00</span>
+        <span id="time">PM</span>
+    </div>
+
+    <center>
+        <marquee behavior="blink" id="marquee">welcome to hyderabad metro </marquee>
+        <fieldset class="container">
+            <form action="">
+                <input type="text" class="input1" list="loc"  placeholder=" Enter starting point">
+                <datalist id="loc">
+                    <option value="Jntu">
+                    <option value="KPHB">
+                    <option value="Kukatpally">
+                    <option value="Balanagar">
+                    <option value="Bharath Nagar">
+                    <option value="Erragadda">
+                    <option value=" ESI Hospital">
+                    <option value=" SR Nagar">
+                    <option value="Ameerpet">
+                    <option value="Panjagutta">
+                    <option value=" Kairathabad">
+                    <option value=" Assembly">
+                    <option value=" Nampally">
+                    <option value="MGBS">
+                    <option value="Dilshukh Nagar">
+                    <option value=" Victoria_Memorial">
+                    <option value=" LBNagar">
+                    
+                </datalist>
+            </form>
+            <!-- <input type="text" placeholder="entr name" pattern="[0-9]*"> -->
+            <input type="text" class="input2" list="loc"   placeholder=" Enter destination point">
+                <datalist id="loc">
+                    <option value="Jntu">
+                    <option value="KPHB">
+                    <option value="Kukatpally">
+                    <option value="Balanagar">
+                    <option value="Bharath Nagar">
+                    <option value="Erragadda">
+                    <option value=" ESI Hospital">
+                    <option value=" SR Nagar">
+                    <option value="Ameerpet">
+                    <option value="Panjagutta">
+                    <option value=" Kairathabad">
+                    <option value=" Assembly">
+                    <option value=" Nampally">
+                    <option value="MGBS">
+                    <option value="Dilshukh Nagar">
+                    <option value=" Victoria Memorial">
+                    <option value=" LBNagar">
+                    
+                </datalist>
+    
+        </form>
+        <br><br>
+        <button id="btn"> generate qrcode</button>
+        <div class="qr-code">
+            <img src="./images/qr.png" alt="">
+            <div  class="fa-sharp fa-solid fa-share-nodes" id="open" onclick="shareOpen()"></div>
+
+        </div>
+    </fieldset>
+    <div id="share">
+        <div class="contant">
+            <i class="fa-sharp fa-regular fa-circle-xmark" id="cross" onclick="shareClose()"></i>
+        <a href="https://web.whatsapp.com/" class="fa-brands fa-whatsapp" id="whatsapp"></a>
+        <a href="https://www.instagram.com/" class="fa-brands fa-instagram" id="insta"></a>
+        <a href="https://www.youtube.com/" class="fa-brands fa-youtube" id="youtube"></a>
+        <a href="https://www.facebook.com/" class="fa-brands fa-facebook" id="fb"></a>
+        </div>
+        
+    </div>
+
+    <div id="booking-container">
+        <a href="#book"></a>
+        <div class="heading">
+            <h4>your bookings are...</h4>
+            <input type="button" value="past journies..." id="past">
+        </div>
+        <div id="past-list"></div> 
+    </div>
+
+
+
+</center>
+
+
+
+<script src="./qr.js"></script>
+</body>
+</html>
