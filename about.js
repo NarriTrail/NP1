@@ -23,3 +23,6 @@ hamark.addEventListener("click",()=>{
   ham.style.display="block"
 })
 
+
+
+

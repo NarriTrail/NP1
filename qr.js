@@ -6,15 +6,19 @@ let qrimg=container.querySelector(".qr-code img")
 let cross=document.getElementById("cross")
 // let share=document.getElementsByClassName("share")
 let mark=document.getElementById("mark")
+let count=0;
 genratebtn.addEventListener("click",Loaddata);
 function Loaddata(){
     let value1=input1.value;
     let value2=input2.value
     let journey=value1+" to "+value2
-   
-      if(value1==value2)
+    
+      if(value1==value2 )
       {
         alert("please change the destination")
+      }
+      else if (count==0) {
+        alert("please select the no.of tickets")
       }
       else{
         genratebtn.innerHTML="generating qr code...."
@@ -25,7 +29,7 @@ function Loaddata(){
 
       let display=document.getElementById("past-list");
       display.innerHTML=display.innerHTML+
-      `<div id="task">
+      `<div class="task">
       <span>${journey}</span>
       <button class="del"><i class="fa fa-trash"></i></button>
       </div>`
@@ -36,10 +40,19 @@ function Loaddata(){
         }
         
       }
+
+      if (`span`==="") {
+        display.style.display="none"
+      }
+
       let showpast=document.getElementById("past")
       showpast.addEventListener("click",function(){
         document.getElementById("past-list").style.display="block";
-        document.getElementsByClassName("task").style.display="block";
+        let tasks = document.getElementsByClassName("task");
+        for(var i = 0; i < tasks.length; i++){
+          // tasks[i].style.visibility = "hidden"; // or
+          tasks[i].style.display = "block"; // depending on what you're doing
+      }
       })
 
     }
@@ -83,3 +96,27 @@ hamark.addEventListener("click",()=>{
   document.getElementById("ham-container").style.display="none"
   ham.style.display="block"
 })
+
+
+let showCount=document.getElementById("display1")
+let amount=document.getElementById("total")
+
+let limit=10;
+let cost=9;
+amount.innerText=0;
+function Plus() {
+ if (count<limit) {
+  count+=1;
+  
+  showCount.innerText=count;
+  let total=cost*count;
+  amount.innerText=total
+
+ }
+}
+function Minus(){
+  if (count>0) {
+    count-=1;
+  showCount.innerText=count;
+  }
+}
