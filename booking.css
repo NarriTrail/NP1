@@ -9,10 +9,11 @@
     --nav:#5cc6d2;
 }
 body{
-    background-image: url('./images/background.jpg' );
+    background-image: url('./images/logo.png' );
     background-repeat: no-repeat;
-    background-size: 1000px;
-    background-position: top;
+    background-position: center center;
+    background-size: contain;
+    background-position: fixed;
     background-position-y: 100px;
     height: 200vh;
     background-color: rgba(105, 248, 248, 0.2);
@@ -119,7 +120,7 @@ li:last-child:hover{
 
 #img{
     width: 40px;
-    padding-top: 5px;
+    margin-top: 5px;
     border-radius: 50%;
 }
 #img:hover{

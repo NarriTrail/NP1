@@ -74,16 +74,22 @@ function loadTime() {
   document.getElementById("min").innerHTML=min;
   document.getElementById("sec").innerHTML=sec;
 let show=document.getElementById("time");
-let s;
+
 if (hrs>=12) {
   show.innerHTML="PM"
 } else {
   show.innerHTML="AM"
 }
 if (sec<10) {
-  sec="0"+sec
+  document.getElementById("sec").innerHTML="0"+sec;
+  
 } 
-
+if (min<10) {
+  document.getElementById("min").innerHTML="0"+min;
+}
+if (hrs<10) {
+  document.getElementById("hrs").innerHTML="0"+hrs;
+}
 }setInterval(loadTime,10)
     
 let ham=document.getElementById("ham")
